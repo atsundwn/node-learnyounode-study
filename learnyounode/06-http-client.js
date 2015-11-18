@@ -2,7 +2,7 @@ var http = require('http');
 var callback = function (response) {
   response.setEncoding('utf8');
   response.on('error', function (error) {
-    return console.error('There was an error');
+    return console.error('There was an error', error);
   });
   response.on('data', function (data) {
     console.log(data);
